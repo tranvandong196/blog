@@ -1,7 +1,8 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: dongtranv
- * Date: 8/1/2018
- * Time: 10:35 AM
- */
+@extends('layouts.master')
+
+@section('content')
+    <div class="col-sm-8 blog-main">
+        <h1>{{$post->title}}</h1>
+        {{$post->body}}
+    </div>
+@endsection

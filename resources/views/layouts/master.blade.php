@@ -9,12 +9,9 @@
     <title>Blog Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-
-    <!-- Custom styles for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+        {{--<link href="/css/bootstrap.min.css" rel="stylesheet">--}}
+        {{--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">--}}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link href="/css/blog.css" rel="stylesheet">
 </head>
 
@@ -23,8 +20,8 @@
 
     <div class="blog-header">
         <div class="container">
-            <h1 class="blog-title">The Bootstrap title</h1>
-            <p class="lead blog-description">An example blog template with bootstrap.</p>
+            <h1 class="blog-title">The Bootstrap Blog</h1>
+            <p class="lead blog-description">An example blog template built with Bootstrap.</p>
         </div>
     </div>
 
@@ -36,7 +33,12 @@
             @include ('layouts.sidebar')
         </div>
     </div>
-    @include ('layouts.footer')
 
+    <nav class="blog-pagination">
+        <a class="btn btn-outline-primary" href="#">Older</a>
+        <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
+    </nav>
+
+    @include ('layouts.footer')
 </body>
 </html>
