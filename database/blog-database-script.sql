@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 01, 2018 at 11:54 AM
+-- Generation Time: Aug 01, 2018 at 12:30 PM
 -- Server version: 10.1.33-MariaDB
 -- PHP Version: 7.2.6
 
@@ -42,7 +42,10 @@ CREATE TABLE `comments` (
 
 INSERT INTO `comments` (`id`, `post_id`, `body`, `created_at`, `updated_at`) VALUES
 (1, 7, 'This is great post!', '2018-07-31 17:00:00', '2018-07-31 17:00:00'),
-(2, 7, 'Couldn\'t agree more. Nice post!', '2018-07-31 17:00:00', '2018-07-31 17:00:00');
+(2, 7, 'Couldn\'t agree more. Nice post!', '2018-07-31 17:00:00', '2018-07-31 17:00:00'),
+(3, 7, 'This is my new comment.', '2018-08-01 03:14:34', '2018-08-01 03:14:34'),
+(4, 7, 'Yet another comment.', '2018-08-01 03:21:59', '2018-08-01 03:21:59'),
+(7, 2, 'Bad post!', '2018-08-01 03:30:05', '2018-08-01 03:30:05');
 
 -- --------------------------------------------------------
 
@@ -164,7 +167,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `migrations`
