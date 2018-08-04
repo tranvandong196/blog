@@ -15,20 +15,15 @@ class PostsController extends Controller
 
     public function index()
     {
-        $posts = Post::latest();
-
-        if (request('month') && request('year')) {
-            $posts = $posts->filter(request(['month', 'year']));
-        }
-
-        $posts = $posts->get();
+        $posts = Post::latest()
+            ->filter(request(['month', 'year']))
+            ->get();
 
         return view('posts.index', compact('posts'));
     }
 
     public function show(Post $post)
     {
-//        $post = Post::find($id);
         return view('posts.show', compact('post'));
     }
 
