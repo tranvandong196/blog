@@ -160,6 +160,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        // External Service Provider
+        Barryvdh\Debugbar\ServiceProvider::class
+
     ],
 
     /*
@@ -209,6 +212,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        // External Service Provider
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
     ],
 
 ];

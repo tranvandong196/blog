@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Post;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Barryvdh\Debugbar\Facade as Debugbar;
 
 class PostsController extends Controller
 {
@@ -15,9 +16,11 @@ class PostsController extends Controller
 
     public function index()
     {
-        $posts = Post::latest()
+        $posts = Post::with('user')->latest()
             ->filter(request(['month', 'year']))
             ->get();
+
+        Debugbar::info($posts[0]);
 
         return view('posts.index', compact('posts'));
     }
