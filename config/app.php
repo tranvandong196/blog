@@ -214,6 +214,7 @@ return [
 
         // External Service Provider
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class
     ],
 
 ];
